@@ -12,10 +12,16 @@ body{
   
 }
 
-button{
+#newbook{
     border-radius: 15px;
     background-color: blue;
     color: white;
     width: 150px;
     height: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
 }
