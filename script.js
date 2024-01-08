@@ -16,7 +16,18 @@ function makeForm() {
     //Create form
     let form = document.createElement('form');
 
+    
+    
+    let formCloseButton = document.createElement('button')
+    formCloseButton.textContent = "X";
+    formCloseButton.id = 'formCloseButton'
+    form.appendChild(formCloseButton);
+    
 
+    formCloseButton.addEventListener('click', ()=>{
+        popup.close()
+        
+    })
     //Create all 4 labels(input fields)
 
 
