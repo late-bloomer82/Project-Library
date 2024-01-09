@@ -2,7 +2,7 @@ const myLibrary = [];
 
 
 
-let button = document.querySelector('button');
+let button = document.getElementById('newbook');
 
 //Making these variables globally acessible
 let authorInput;
@@ -17,15 +17,19 @@ function makeForm() {
     let form = document.createElement('form');
 
     
-    
+    //Popup closing button 
     let formCloseButton = document.createElement('button')
     formCloseButton.textContent = "X";
     formCloseButton.id = 'formCloseButton'
     form.appendChild(formCloseButton);
     
-
-    formCloseButton.addEventListener('click', ()=>{
+    
+    formCloseButton.addEventListener('click', (event)=>{
+        //Prevent page refresh 
+        event.preventDefault();
         popup.close()
+        //Avoid creating a duplicate form upon reclicking new book button.
+        popup.textContent ="";
         
     })
     //Create all 4 labels(input fields)
@@ -81,6 +85,7 @@ function makeForm() {
     let submitButton = document.createElement('button');
     submitButton.type = 'submit';
     submitButton.textContent = 'Submit';
+    submitButton.id = 'submitButton';
     form.appendChild(submitButton);
 
     //Input Error handling
@@ -91,7 +96,7 @@ function makeForm() {
         }
         else {
             event.preventDefault(); // Prevent the default form submission behavior
-            addBookToLibrary(); // Call your function to handle the data
+            addBookToLibrary(); 
             emptyForm();
         }
 
