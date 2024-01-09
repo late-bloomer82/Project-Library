@@ -1,7 +1,9 @@
-body{
+html,body{
     color: black;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #B6BBC4
+    background-color: #B6BBC4;
+    height: 100%;
+    width: 100%;
 }
 /*Logo animation*/
 @keyframes zoomInOut {
@@ -12,13 +14,18 @@ body{
       transform: scale(1.1);
   }
 }
+
+
 .header img{
+  
   width: 80px;
   height: 80px;
   grid-row: 1 / 2;
-  padding-bottom: 20px;
+  
   margin-left: 20px;
   animation: zoomInOut 3s infinite ;
+  background-color: white;
+  border-radius: 20px;
  
 }
 
@@ -68,14 +75,28 @@ form{
     display: flex;
     flex-direction: column;
     
+    
     height: 100%;
     width: 100%;
+}
+
+#submitButton{
+  background-color: aquamarine;
+  border-radius: 20px;
+  margin-top: 90px;
+  margin-left: 100px;
+  color: black;
+  width: 200px;
+  height: 50px;
 }
 
 .library{
 
     display: flex;
+    height: 100%;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* small animation for card border */
@@ -103,7 +124,7 @@ form{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: flowingWater 1s infinite linear;
     overflow-y: auto;
-     padding-bottom: 30px;
+     
     
     
    
@@ -119,6 +140,7 @@ form{
     animation: pulse 2s infinite;
     width: 400px;
     height: 300px;
+    border-radius: 50px;
 }
 
 #formCloseButton{
@@ -155,9 +177,8 @@ form{
   width: 200px;
   height: 50px;
   margin-left: 45px;
-  padding: 20px;
   border-radius: 10px;
   cursor: pointer;
-  padding-bottom: 10px;
+
 }
 
