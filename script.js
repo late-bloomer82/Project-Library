@@ -131,11 +131,13 @@ button.addEventListener('click', makeForm);
 
 
 //Construsctor function
-function Book(author, title, pages, read) {
+class Book {
+    constructor(author, title, pages , read){
     this.author = author;
     this.title = title;
     this.pages = pages;
     this.read = read;
+}
 }
 
 
